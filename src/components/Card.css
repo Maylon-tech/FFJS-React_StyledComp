@@ -1,0 +1,17 @@
+.card {
+    padding: 10px;
+    border-radius: 8px;
+    width: 23%;
+    height: 250px;
+    background-color: silver;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 1rem;
+}

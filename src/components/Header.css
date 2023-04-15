@@ -1,0 +1,26 @@
+header {
+    height: 10vh;
+    background-color: #222;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.menu li {
+    padding: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
