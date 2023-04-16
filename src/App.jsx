@@ -1,49 +1,24 @@
 import React from 'react'
-import './App.css'
-import Header from './components/Header'
-import Content from './components/Content'
-import Card from './components/Card'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
 
-import img1 from './images/card1.jpg'
-import img2 from './images/card2.jpg'
-import img3 from './images/card3.png'
+import Header from './components/Header'
+import Contents from './pages/Contents'
+import Home from './pages/Home/Home'
 
 const App = () => {
   return (
-    <>
-      <Header titulo="Formacao FullStack" />
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/contents" element={ <Contents />} />
+        <Route path="/" element={ <Home />} />
 
-      <Content titulo="Conteudo da Home page">
-        <h3>Javascript Developer 2023</h3>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur 
-          adipisicing elit. Perspiciatis dolores sed sapiente!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur 
-          adipisicing elit. Perspiciatis dolores sed sapiente!
-        </p>
-        <button>CV Download</button>
-      </Content>
-      <div className="card-container">
-        <Card 
-          imagem={img1}
-          titulo="ReactDev"
-          texto="Desenvolvimento de paginas robustas e modernas"
-        />
-        <Card 
-          imagem={img2}
-          titulo="CyberSecurity"
-          texto="Desenvolvimento de paginas robustas e modernas"
-        />
-        <Card 
-          imagem={img3}
-          titulo="Programming Basics"
-          texto="Desenvolvimento de paginas robustas e modernas"
-        />
-      </div>
-    </>
+      </Routes>
+    </Router>
   )
 }
 

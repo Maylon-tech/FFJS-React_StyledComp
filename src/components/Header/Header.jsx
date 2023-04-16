@@ -1,20 +1,26 @@
 import React from 'react'
 import '../components/Header.css'
+import { Link } from 'react-router-dom'
 
 
-const Header = ({ titulo }) => {
+const Header = () => {
   return (
     <header>
         <div className="logo">
             <span>LOGO</span>
         </div>
-        { titulo }
+       
         <nav className="navbar">
             <ul className="menu">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Blog</li>
+              
+                <Link to="/">Home</Link>
+
+                <Link to="/contents">Contents</Link>
+
+                <Link></Link>
+
+                <Link></Link>
+
             </ul>
         </nav>
     </header>
