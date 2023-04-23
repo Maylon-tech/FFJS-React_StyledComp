@@ -5,16 +5,19 @@ import {
   Route
 } from 'react-router-dom'
 
-import Header from './components/Header'
-import Contents from './pages/Contents'
+import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
+import GlobalStyle from './GlobalStyles/GlobalStyle'
+import Basics from './pages/Basics/Basics'
 
 const App = () => {
   return (
     <Router>
-      <Header />
+      <GlobalStyle />
+      <Header title="Formacao FullStack" />
+
       <Routes>
-        <Route path="/contents" element={ <Contents />} />
+        <Route path="/basics" element={ <Basics />} />
         <Route path="/" element={ <Home />} />
 
       </Routes>

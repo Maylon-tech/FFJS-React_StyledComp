@@ -1,29 +1,29 @@
 import React from 'react'
-import '../components/Header.css'
+import { Container, Navbar } from './styles'
 import { Link } from 'react-router-dom'
 
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
-    <header>
-        <div className="logo">
-            <span>LOGO</span>
-        </div>
+    <Container>
+        <span>
+            LOGO
+        </span>
+
+       {title}
        
-        <nav className="navbar">
-            <ul className="menu">
-              
+        <Navbar>
+            <ul>
                 <Link to="/">Home</Link>
 
-                <Link to="/contents">Contents</Link>
+                <Link to="/basics">Basics</Link>
 
                 <Link></Link>
 
                 <Link></Link>
-
             </ul>
-        </nav>
-    </header>
+        </Navbar>
+    </Container>
   )
 }
 
