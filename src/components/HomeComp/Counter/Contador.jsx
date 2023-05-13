@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container } from './styles'
+import { Buttons, Container, CounterRes } from './styles'
 import { useEffect } from 'react'
 
 const Contador = ({ title }) => {
@@ -13,16 +13,20 @@ const Contador = ({ title }) => {
   }
 
   useEffect(() => {
-    alert('Ok counter On..')
+    
   }, [])
 
   return (
     <Container>
-        { title }
-        <button onClick={() => handleClick('+')}>Mais</button>
-        <button onClick={() => handleClick('-')}>Menos</button>
+        <h3>{ title }</h3>
+        <Buttons>
+          <button onClick={() => handleClick('+')}>Mais</button>
+          <button onClick={() => handleClick('-')}>Menos</button>
+        </Buttons>
 
-        <span>{counter}</span>
+        <CounterRes>
+          {counter}
+        </CounterRes>
     </Container>
   )
 }

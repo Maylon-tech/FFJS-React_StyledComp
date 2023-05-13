@@ -22,30 +22,46 @@ export const Section = styled.section`
   place-items: center;
 `
 
-export const Card = styled.section`
-  width: 230px;
-  height: 250px;
+export const CardComp = styled.div`
+  width: 280px;
+  height: 270px;
   background-color: #eee;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   color: #222;
-  font-size: 2rem;
+  font-size: 1rem;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
   cursor: pointer;
   transition: .4s ease;
 
+  > h2 {
+    margin: 1rem 0;
+  }
+  > p {
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
   &:hover {
     transform: translateY(-10px);
   }
+  > img {
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+   object-fit: cover;
+   
+  }
+
 `
 
 /*  middle module - countner API fetch */
 
 export const MiddleModule = styled.div`
-  border: 2px solid orange;
-  height: 500px;
+  background-color: cyan;
+  height: 400px;
   width: 100%;
   
   display: grid;

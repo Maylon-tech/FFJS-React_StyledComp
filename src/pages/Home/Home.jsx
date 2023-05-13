@@ -1,6 +1,10 @@
 import React from 'react'
-import { Card, Container, MiddleModule, Section } from './styles'
+import { Container, MiddleModule, Section } from './styles'
 import Contador from '../../components/HomeComp/Counter/Contador'
+import Card from '../../components/HomeComp/Card'
+import ReactImage from '../../assets/images/react.png'
+import TypescriptImage from '../../assets/images/typescript.png'
+import JavascriptImage from '../../assets/images/javascript.png'
 
 //  Render Componets Users - Counter and ...
 const page = {
@@ -9,25 +13,28 @@ const page = {
 
 const Home = () => {
 
-
-
-  
   return (
     <Container>
         <h1>Module Basics of Formacao Fullstack JS</h1>
         <Section>
 
-          <Card>
-            <h3>card one</h3>
-          </Card>
+          <Card
+            title="Javascript"
+            text="The most famous language used to build front-end system."
+            image={JavascriptImage}
+          />
 
-          <Card>
-            <h3>Card two</h3>
-          </Card>
+          <Card
+            title="Typescript"
+            text="The super set of Javascript language."
+            image={TypescriptImage}
+          />
 
-          <Card>
-            <h3>Card three</h3>
-          </Card>
+          <Card 
+            title="ReactJS"
+            text="The best Lib to build Front-End Web Page."
+            image={ReactImage}
+          />
 
         </Section>
 

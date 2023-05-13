@@ -8,7 +8,7 @@ import {
 import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 import GlobalStyle from './GlobalStyles/GlobalStyle'
-import Basics from './pages/Basics/Basics'
+import ApisCall from './pages/API/ApisCall'
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
       <Header title="Formacao FullStack" />
 
       <Routes>
-        <Route path="/basics" element={ <Basics />} />
+        <Route path="/api" element={ <ApisCall />} />
         <Route path="/" element={ <Home />} />
 
       </Routes>
