@@ -6,7 +6,9 @@ const Card = ({ title, text, image }) => {
     <CardComp>
         <h2>{title}</h2>
         <p>{text}</p>
-        <img src={image} alt="" />
+        <div>
+          <img src={image} alt="" />
+        </div>
     </CardComp>
   )
 }

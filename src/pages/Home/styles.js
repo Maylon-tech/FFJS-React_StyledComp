@@ -1,30 +1,29 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 90vh;
+  height: 100vh;
   padding: 1rem;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 
   h1 {
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 `
 
 export const Section = styled.section`
   width: 100%;
-  height: 350px;
+  height: 480px;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 3fr);
-  align-items: center;
   place-items: center;
 `
 
 export const CardComp = styled.div`
-  width: 280px;
-  height: 270px;
+  width: 320px;
+  height: 350px;
   background-color: #eee;
   border-radius: 4px;
   display: flex;
@@ -37,6 +36,19 @@ export const CardComp = styled.div`
   cursor: pointer;
   transition: .4s ease;
 
+  > div {
+    width: 85%;
+    height: 65%;
+    display: flex;
+    place-items: center;
+
+   > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+    
   > h2 {
     margin: 1rem 0;
   }
@@ -47,21 +59,19 @@ export const CardComp = styled.div`
   &:hover {
     transform: translateY(-10px);
   }
-  > img {
-   width: 120px;
-   height: 120px;
-   border-radius: 50%;
-   object-fit: cover;
-   
-  }
 
 `
+
+
+
+
+
 
 /*  middle module - countner API fetch */
 
 export const MiddleModule = styled.div`
   background-color: cyan;
-  height: 400px;
+  height: 600px;
   width: 100%;
   
   display: grid;

@@ -20,7 +20,7 @@ const Home = () => {
 
           <Card
             title="Javascript"
-            text="The most famous language used to build front-end system."
+            text="Great language used to build front-end"
             image={JavascriptImage}
           />
 
