@@ -41,3 +41,16 @@ export const Navbar = styled.nav`
         color: #222;
     }
 `
+
+export const Header = styled.header`
+    
+
+    > h1 {
+        color: #222;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 1.8rem 0;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+`

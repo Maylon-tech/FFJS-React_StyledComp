@@ -16,7 +16,7 @@ const Header = ({ title }) => {
             <ul>
                 <Link to="/">Home</Link>
 
-                <Link to="/api">APIs</Link>
+                <Link to="/customer">Clientes</Link>
 
                 <Link></Link>
 

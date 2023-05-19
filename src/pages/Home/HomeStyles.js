@@ -61,19 +61,3 @@ export const CardComp = styled.div`
   }
 
 `
-
-
-
-
-
-
-/*  middle module - countner API fetch */
-
-export const MiddleModule = styled.div`
-  background-color: cyan;
-  height: 600px;
-  width: 100%;
-  
-  display: grid;
-  place-items: center;
-`

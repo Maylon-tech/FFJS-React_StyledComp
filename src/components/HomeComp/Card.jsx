@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardComp } from '../../pages/Home/styles'
+import { CardComp } from '../../pages/Home/HomeStyles'
 
 const Card = ({ title, text, image }) => {
   return (

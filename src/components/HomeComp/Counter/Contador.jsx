@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Buttons, Container, CounterRes } from './styles'
 import { useEffect } from 'react'
 
+
 const Contador = ({ title }) => {
   const [counter, setCounter] = useState(0)
 
@@ -17,17 +18,19 @@ const Contador = ({ title }) => {
   }, [])
 
   return (
-    <Container>
-        <h3>{ title }</h3>
-        <Buttons>
-          <button onClick={() => handleClick('+')}>Mais</button>
-          <button onClick={() => handleClick('-')}>Menos</button>
-        </Buttons>
+    
+      <Container>
+          <h3>{ title }</h3>
+          <Buttons>
+            <button onClick={() => handleClick('+')}>Mais</button>
+            <button onClick={() => handleClick('-')}>Menos</button>
+          </Buttons>
 
-        <CounterRes>
-          {counter}
-        </CounterRes>
-    </Container>
+          <CounterRes>
+            {counter}
+          </CounterRes>
+      </Container>
+ 
   )
 }
 

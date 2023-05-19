@@ -5,23 +5,26 @@ import {
   Route
 } from 'react-router-dom'
 
-import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 import GlobalStyle from './GlobalStyles/GlobalStyle'
-import ApisCall from './pages/API/ApisCall'
+import TemplateDefault from './template/TemplateDefault'
+import Customer from './pages/Cliente/Customer'
+import SingleCustomer from './pages/Cliente/SingleCustomer'
 
 const App = () => {
   return (
     <Router>
-      <GlobalStyle />
-      <Header title="Formacao FullStack" />
+      <TemplateDefault>
+        <GlobalStyle />
+        <Routes>
+          <Route path="/customer/:id" element={ <SingleCustomer /> } />
+          <Route path="/customer" element={ <Customer />} />
+          <Route path="/" element={ <Home />} />
 
-      <Routes>
-        <Route path="/api" element={ <ApisCall />} />
-        <Route path="/" element={ <Home />} />
-
-      </Routes>
+        </Routes>
+      </TemplateDefault>
     </Router>
+
   )
 }
 

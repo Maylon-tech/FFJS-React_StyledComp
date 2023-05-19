@@ -1,15 +1,12 @@
 import React from 'react'
-import { Container, MiddleModule, Section } from './styles'
-import Contador from '../../components/HomeComp/Counter/Contador'
+import { Container, MiddleModule, Section } from './HomeStyles'
+
 import Card from '../../components/HomeComp/Card'
 import ReactImage from '../../assets/images/react.png'
 import TypescriptImage from '../../assets/images/typescript.png'
 import JavascriptImage from '../../assets/images/javascript.png'
 
-//  Render Componets Users - Counter and ...
-const page = {
 
-}
 
 const Home = () => {
 
@@ -38,10 +35,7 @@ const Home = () => {
 
         </Section>
 
-        <MiddleModule>
-          <Contador title='Contador' />
-          {/* { Page && <Page /> } */}
-        </MiddleModule>
+        
     </Container>
   )
 }
