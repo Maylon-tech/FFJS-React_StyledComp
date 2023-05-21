@@ -1,11 +1,11 @@
 import React from 'react'
 import { ContainerSingle } from './CustomerStyle'
 
-const SingleCustomer = ({ id }) => {
+const SingleCustomer = () => {
   return (
     <ContainerSingle>
         <h1>Single Customer Show</h1>
-        <h1>{id}</h1>
+        
     </ContainerSingle>
   )
 }

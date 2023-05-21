@@ -82,3 +82,57 @@ background-color: gray;
     display: grid;
     place-items: center;
 `
+
+
+/* Modal Container  */
+
+export const Modal = styled.div`
+    width: 450px;
+    height: 270px;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    display: none;
+
+`
+
+export const ModalTitle = styled.h1`
+    font-size: 1.3rem;
+    text-align: center;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+`
+
+export const ButtonContents = styled.div`
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+`
+
+export const ButtonModal = styled.button`
+    padding: 1rem;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 0;
+    border: 1px solid #222;
+    cursor: pointer;
+
+    &:first-child {
+        background-color: lightskyblue;
+    }
+
+    &:last-child {
+        background-color: lightcoral;
+    }
+`

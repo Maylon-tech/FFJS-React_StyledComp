@@ -10,7 +10,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: relative;
     color: green;
     font-size: 1.3rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -53,4 +53,38 @@ export const Header = styled.header`
         text-transform: uppercase;
         letter-spacing: 2px;
     }
+`
+
+/*  Menu Drawer - Side Bar  */
+
+export const Drawer = styled.div`
+    height: 100vh;
+    width: 250px;
+    background-color: lightgray;
+    border: 2px solid orange;
+    padding: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    display: none;
+`
+
+export const List = styled.ul`
+    list-style: none;
+`
+
+export const ListItem = styled.li``
+
+export const ListItemIcon = styled.span``
+
+export const ListItemText = styled.span``
+
+export const IconButton = styled.div`
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: #222;
+    font-size: 2rem;
 `
