@@ -59,16 +59,25 @@ export const Header = styled.header`
 
 export const Drawer = styled.div`
     height: 100vh;
-    width: 250px;
+    width: 320px;
     background-color: lightgray;
     border: 2px solid orange;
     padding: 1.5rem;
     position: absolute;
     top: 0;
+    transition: all .6s;
+    left: ${({ control }) => control ? '-1%' : '-100%'};
+`
+
+export const OverLay = styled.div`
+    position: absolute;
+    top: 0;
     left: 0;
-
-
-    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: ${({ control }) => control ? 'rgba(0, 0, 0, 0.9)' : 'rgba(0, 0, 0, 0.1)'};
+    
 `
 
 export const List = styled.ul`
@@ -87,4 +96,11 @@ export const IconButton = styled.div`
     height: 40px;
     color: #222;
     font-size: 2rem;
+    > svg {
+        color: #333;
+    }
+`
+
+export const CloseButton = styled.button`
+    padding: 0%.8rem;
 `

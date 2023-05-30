@@ -10,6 +10,7 @@ import GlobalStyle from './GlobalStyles/GlobalStyle'
 import TemplateDefault from './template/TemplateDefault'
 import Customer from './pages/Cliente/Customer'
 import SingleCustomer from './pages/Cliente/SingleCustomer'
+import Register from './pages/Register/Register'
 
 const App = () => {
   return (
@@ -17,10 +18,10 @@ const App = () => {
       <TemplateDefault>
         <GlobalStyle />
         <Routes>
-          <Route path="/customer/:id" element={ <SingleCustomer /> } />
-          <Route path="/customer" element={ <Customer />} />
           <Route path="/" element={ <Home />} />
-
+          <Route path="/customer" element={ <Customer />} />
+          <Route path="/customer/add" element={ <Register />} />
+          {/* <Route path="/customer/:id" element={ <SingleCustomer /> } /> */}
         </Routes>
       </TemplateDefault>
     </Router>

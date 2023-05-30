@@ -3,8 +3,22 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  position: relative;
  
 `
+
+export const RegisterButton = styled.button`
+    padding: .5rem 1rem;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    right: 130px;
+`
+
 export const Title = styled.h1`
    font-size: 2rem;
    color: #222;
@@ -75,15 +89,6 @@ export const Button = styled.div`
 `
 
 
-export const ContainerSingle = styled.div`
-background-color: gray;
-    height: 100vh;
-    display: 100vw;
-    display: grid;
-    place-items: center;
-`
-
-
 /* Modal Container  */
 
 export const Modal = styled.div`
@@ -99,8 +104,8 @@ export const Modal = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    display: none;
+    z-index: 10;
+    display: ${({ opacity }) => opacity ? 'block' : 'none'};
 
 `
 

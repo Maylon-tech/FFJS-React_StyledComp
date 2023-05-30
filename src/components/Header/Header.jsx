@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Navbar } from './Headerstyles'
+import { CloseButton, Container, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Navbar, OverLay } from './Headerstyles'
 import { Link } from 'react-router-dom'
 import { AiOutlineHome, AiOutlineMenu } from 'react-icons/ai'
 
@@ -9,6 +9,10 @@ const Header = ({ title }) => {
 
   const handleToggleMenu = () => {
     setDrawer(!drawer)
+  }
+
+  const handleCloseMenu = () => {
+    setDrawer(false)
   }
 
   return (
@@ -41,7 +45,11 @@ const Header = ({ title }) => {
               onClose = Propriedade para controle o fechamento do Menu. Essa propriedade chama
               a Funcao handleToggleMenu().
           */}
-        <Drawer onclick={() => handleToggleMenu(!drawer)}>
+        <OverLay />
+        <Drawer control={drawer}>
+          <CloseButton onClick={handleCloseMenu}>
+            Close
+          </CloseButton>
           <List>
             <ListItem>
               <ListItemIcon>
