@@ -37,6 +37,7 @@ const Card = ({ id, name, lastname, email, avatar, onRemoveCustomer }) => {
                     <p>{email}</p>
                 </ProfileInfo>
             </ProfileContent>
+
             <IconContent>
                 <Button onClick={handleToggleModal}>
                     <RiDeleteBin6Line size={40} color='gray'/>
@@ -48,6 +49,7 @@ const Card = ({ id, name, lastname, email, avatar, onRemoveCustomer }) => {
                     <AiOutlineEdit size={40} color='gray'/>
                 </Button>            
             </IconContent>
+
         </CardGrid>
 
         <Modal opacity={modal}>

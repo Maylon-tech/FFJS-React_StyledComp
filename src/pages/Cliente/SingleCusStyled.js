@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background-color: lightgray;
-    height: 100vh;
-    display: 100vw;
-    display: grid;
-    place-items: center;
+  height: 100vh;
+  display: 100vw;
+  display: grid;
+  place-items: center;
 `
 
 export const MainContent = styled.div`

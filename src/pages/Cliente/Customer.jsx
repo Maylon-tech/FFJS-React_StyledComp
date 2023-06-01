@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 const Customer = () => {
     const [customer, setCustomer] = useState([])
     const navigate = useNavigate()
+    
     useEffect(() => {
         axios.get("https://reqres.in/api/users")
             .then(response => {
