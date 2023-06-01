@@ -65,8 +65,10 @@ export const Drawer = styled.div`
     padding: 1.5rem;
     position: absolute;
     top: 0;
+    left: 0;
     transition: all .6s;
     left: ${({ control }) => control ? '-1%' : '-100%'};
+    z-index: 10;
 `
 
 export const OverLay = styled.div`
@@ -82,13 +84,24 @@ export const OverLay = styled.div`
 
 export const List = styled.ul`
     list-style: none;
+    border: 3px solid white;
 `
 
-export const ListItem = styled.li``
+export const ListItem = styled.li`
+    border: 3px solid green;
+    margin: 1rem 0;
+    padding: 1.3rem;
+    cursor: pointer;
+`
 
-export const ListItemIcon = styled.span``
+export const ListItemIcon = styled.span`
+    margin-right: 1rem;
+    
+`
 
-export const ListItemText = styled.span``
+export const ListItemText = styled.span`
+    color: #fff;
+`
 
 export const IconButton = styled.div`
     cursor: pointer;
@@ -102,5 +115,14 @@ export const IconButton = styled.div`
 `
 
 export const CloseButton = styled.button`
-    padding: 0%.8rem;
+    padding: .6rem;
+    background-color: crimson;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 25px;
 `

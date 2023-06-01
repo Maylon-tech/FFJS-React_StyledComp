@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 import { 
   ButtonContent, 
@@ -13,11 +14,15 @@ import {
   Title
  } from './SingleCusStyled'
 
-const SingleCustomer = ({ id, name, lastname, email, avatar }) => {
+const SingleCustomer = ({ name, lastname, email, avatar }) => {
+
+  const { id } = useParams()
+  console.log(id) 
+   
   return (
     <Container>
         <MainContent>
-          <ProfileImg>
+          {/* <ProfileImg>
             <Image src={avatar} alt='user-Image'></Image>
             The Avatar from User here
           </ProfileImg>
@@ -33,7 +38,7 @@ const SingleCustomer = ({ id, name, lastname, email, avatar }) => {
               <RemoveButton></RemoveButton>
             </ButtonContent>
 
-          </InfoContent>
+          </InfoContent> */}
 
         </MainContent>
         

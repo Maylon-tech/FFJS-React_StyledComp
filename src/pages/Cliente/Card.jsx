@@ -2,18 +2,22 @@ import React, { useState } from 'react'
 import { Button, ButtonContents, ButtonModal, CardGrid, IconContent, Modal, ModalTitle, ProfileContent, ProfileInfo } from './CustomerStyle'
 import { AiOutlineEye, AiOutlineEdit } from 'react-icons/ai'
 import { RiDeleteBin6Line } from 'react-icons/ri'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import EditModal from '../../components/EditModal/EditModal'
 
-const Card = ({ id, name, lastname, email, avatar, onRemoveCustomer }) => {
+const Card = ({  name, lastname, email, avatar, onRemoveCustomer, onSingleCustomer }) => {
     const [modal, setModal] = useState(false)
     const [editModal, setEditModal] = useState(false)
+    
     const navigate = useNavigate()
+    const { id } = useParams()
+    // const [ id ] = singleNav.filter((item) => )
+
+
 
     const handleToggleModal = () => {
         setModal(!modal)
     }
-
     const handleCloseRemoveModal = () => {
         setModal(false)
     }
@@ -25,6 +29,11 @@ const Card = ({ id, name, lastname, email, avatar, onRemoveCustomer }) => {
     const handleConfirm = (id) => {
         onRemoveCustomer(id)
         setModal(false)
+    }
+
+    // Direcionar cada usuario para sua propria pagina com ID,
+    const handleSingleCustomer = (id) => {
+         navigate(`customer/singleCustomer/${id}`)
     }
 
   return (
@@ -42,7 +51,7 @@ const Card = ({ id, name, lastname, email, avatar, onRemoveCustomer }) => {
                 <Button onClick={handleToggleModal}>
                     <RiDeleteBin6Line size={40} color='gray'/>
                 </Button>
-                <Button onClick={() => navigate("singleCustomer")}>
+                <Button onClick={() => handleSingleCustomer(id)}>
                     <AiOutlineEye size={40} color='crimson'/>
                 </Button>
                 <Button onClick={handleEditModal}>

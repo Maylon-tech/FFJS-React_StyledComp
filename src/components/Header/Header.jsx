@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { CloseButton, Container, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Navbar, OverLay } from './Headerstyles'
 import { Link } from 'react-router-dom'
 import { AiOutlineHome, AiOutlineMenu } from 'react-icons/ai'
-
+import { GrClose } from 'react-icons/gr'  
 
 const Header = ({ title }) => {
   const [drawer, setDrawer] = useState(false)
@@ -48,7 +48,7 @@ const Header = ({ title }) => {
         <OverLay />
         <Drawer control={drawer}>
           <CloseButton onClick={handleCloseMenu}>
-            Close
+            <GrClose />
           </CloseButton>
           <List>
             <ListItem>

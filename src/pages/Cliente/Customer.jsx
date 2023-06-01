@@ -4,7 +4,7 @@ import Card from './Card'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const Customer = () => {
+const Customer = ({ id }) => {
     const [customer, setCustomer] = useState([])
     const navigate = useNavigate()
     
@@ -26,6 +26,11 @@ const Customer = () => {
             })
     }
 
+    // const handleSinglePage = () => {
+       
+    // } 
+
+
   return (
     <Container>
         <Title>Sessao de Clientes</Title>
@@ -42,6 +47,7 @@ const Customer = () => {
                             email={item.email}
                             avatar={item.avatar}
                             onRemoveCustomer={handleRemoveCustomer}
+                            // onSingleCustomer={handleSinglePage}
                         />                        
                    )
 })

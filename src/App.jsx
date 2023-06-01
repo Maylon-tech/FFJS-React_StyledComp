@@ -18,10 +18,10 @@ const App = () => {
       <TemplateDefault>
         <GlobalStyle />
         <Routes>
-          <Route path="/" element={ <Home />} />
-          <Route path="/customer" element={ <Customer />} />
+          <Route path="/customer/singleCustomer/:id" element={ <SingleCustomer /> } />
           <Route path="/customer/:id" element={ <Register />} />
-          <Route path="/customer/:id" element={ <SingleCustomer /> } />
+          <Route path="/customer" element={ <Customer />} />
+          <Route path="/" element={ <Home />} />
         </Routes>
       </TemplateDefault>
     </Router>
